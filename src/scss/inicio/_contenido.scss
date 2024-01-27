@@ -1,0 +1,47 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+.contenido-principal{
+    background-color: v.$blanco;
+    padding: v.$separacion 2rem;
+
+
+    @include m.tablet { 
+        padding: calc(v.$separacion * 2);
+        margin-top: -10rem;
+        position: relative;
+        
+     }
+
+   
+
+}
+
+.listado-iconos{
+    display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: v.$separacion;
+padding: 0;
+
+@include m.tablet { 
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+    li{
+        list-style: none;
+
+        img{
+            width: 15rem;
+        }
+
+        .icono-texto{
+            font-size: 3rem;
+            font-family: v.$fuenteSecundaria;
+            color: v.$primario;
+        }
+    }
+}
+

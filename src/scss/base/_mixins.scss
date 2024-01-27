@@ -1,0 +1,45 @@
+@use 'variables' as v;
+
+
+
+
+//*Media Queries Mixins
+@mixin telefono{
+    @media (min-width: v.$telefono) {
+            @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet) {
+            @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: v.$desktop) {
+            @content;
+    }
+}
+
+
+//*Grid
+
+
+@mixin grid-col ( $columnas , $fr ,$gap){
+    display: grid;
+    grid-template-columns: repeat($columnas, $fr) ;
+    gap: $gap;
+
+}
+
+//! ejemplo: @include m.grid-col(3,1fr,4rem);
+
+@mixin grid-row ( $rows , $fr ,$gap){
+    display: grid;
+    grid-template-rows: repeat($rows, $fr) ;
+    gap: $gap;
+
+}
+
+//! ejemplo: @include m.grid-row(3,1fr,4rem);

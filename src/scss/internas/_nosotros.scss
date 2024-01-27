@@ -1,0 +1,41 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenido-nosotros{
+
+
+    @include m.tablet { 
+        @include m.grid-col(2, 1fr,3rem);
+
+     }
+
+    .imagen{
+        max-width: 40rem;
+        height: auto;
+        margin: 0 auto;
+
+        img{
+            
+            border: 3rem solid v.$blanco;
+            transform: rotate(-6deg);
+            object-fit: cover;
+            box-shadow: 6px 5px 15px -3px rgba(0, 0, 0, 0.5) ;
+        }
+
+    }
+
+    .texto{
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 0;
+         }
+
+         blockquote{
+            margin: 0;
+            padding: 1rem;
+            border-left: .5rem solid v.$primario;
+            font-size: 2rem;
+         }
+
+    }
+}

@@ -1,0 +1,32 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenido-menu {
+    background-image: url(../img/cafe.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    aspect-ratio: 3 / 6;
+
+    @include m.telefono { 
+        aspect-ratio: 3/4;
+     }
+
+
+    @include m.tablet { 
+        
+        aspect-ratio:16/11;
+        background-size: 40%;
+     }
+
+     @include m.desktop { 
+        aspect-ratio:16/6;
+        background-position: bottom right;
+        @include m.grid-col(2,1fr,4rem); 
+      }
+   
+      .texto{
+        font-size: 2rem;
+      }
+
+}

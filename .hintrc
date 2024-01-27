@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-text-size-adjust",
+          "grid-template-columns",
+          "display: grid",
+          "grid-template-columns: repeat($columnas, $fr)",
+          "grid-template-rows",
+          "grid-template-rows: repeat($rows, $fr)",
+          "grid-template-columns: repeat($columnas, $fr(fr))"
+        ]
+      }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "picture"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ie <= 11"
+  ]
+}

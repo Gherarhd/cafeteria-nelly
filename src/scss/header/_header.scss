@@ -1,0 +1,64 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+.header {
+  position: relative;
+  padding: v.$separacion 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include m.tablet { 
+    min-height: 70rem;
+   }
+
+  &::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .contenido-header {
+    position: relative;
+
+    h1{
+      text-align: center;
+      text-transform: uppercase;
+      color: v.$blanco;
+      margin-top: v.$separacion;
+
+      @include m.tablet { 
+        margin-top: calc(v.$separacion * 2);
+       }
+    }
+  }
+}
+
+//Header de cada pagina
+.header-inicio {
+  background-image: url(../img/header_inicio.webp);
+}
+
+.header-nosotros{
+  background-image: url(../img/header_nosotros.webp);
+}
+
+.header-proceso{
+  background-image: url(../img/header_proceso.webp);
+}
+
+.header-menu{
+  background-image: url(../img/header_menu.webp);
+}
+
+.header-galeria{
+  background-image: url(../img/header_galeria.webp);
+}
+
+.header-contacto{
+  background-image: url(../img/header_contacto.webp);
+}
+

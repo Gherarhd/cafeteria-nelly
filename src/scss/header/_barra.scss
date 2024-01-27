@@ -1,0 +1,35 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+
+.barra{
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet { 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+     }
+
+
+
+     .logo{
+        width: 50%;
+        margin: 0 auto;
+
+
+
+        @include m.tablet { 
+            width: calc(v.$separacion * 4);
+            margin: 0;
+        }
+       
+     }
+
+    
+
+
+   
+}
